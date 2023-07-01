@@ -5,17 +5,18 @@
     <title>Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- compiled tailwind -->
     <link href="/dist/output.css" rel="stylesheet">
-    
+
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    
+
     <!-- material icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body class="bg-slate-900">
@@ -26,7 +27,7 @@
                 <span class="material-symbols-outlined mr-2">
                     account_circle
                 </span>
-                <span>Login</span>
+                <span>Cadastro</span>
             </h1>
             <form action="/" method="post">
                 <label for="contact" class="block mb-4">
@@ -36,8 +37,10 @@
                     </span>
                     <input type="text" name="contact" id="contact"
                         class="block w-full p-2 text-base bg-transparent text-pink-700 border focus:outline focus:outline-pink-700 rounded"
-                        placeholder="Email/Telefone"
-                        required>
+                        placeholder="Email/Telefone" required>
+                    <span class="text-red-700 hidden text-xs">O contacto deve ser um email ou um telefone
+                        válido</span>
+                    <span class="text-green-700 hidden text-xs">Contacto válido!</span>
                 </label>
 
                 <label for="password" class="block mb-4">
@@ -46,11 +49,11 @@
                         Senha
                     </span>
                     <input type="password" name="password" id="password"
-                        class="block w-full p-2 text-base bg-transparent text-pink-700 border focus:outline focus:outline-pink-700 rounded"
-                        placeholder="Senha"
-                        required>
+                        class="peer block w-full p-2 text-base bg-transparent text-pink-700 border focus:outline focus:outline-pink-700 rounded"
+                        placeholder="Senha" required>
+                    <span class="text-red-700 hidden text-xs">A senha deve ter pelo menos 8 caracteres e pelo menos 1 letra maiúscula e 1 número </span>
                 </label>
-                
+
                 <label for="password-confirm" class="block mb-8">
                     <span class="flex text-base text-pink-700 mb-1">
                         <!-- <span class="material-symbols-outlined mr-2">lock</span> -->
@@ -58,11 +61,12 @@
                     </span>
                     <input type="password" name="password-confirm" id="password-confirm"
                         class="block w-full p-2 text-base bg-transparent text-pink-700 border focus:outline focus:outline-pink-700 rounded"
-                        placeholder="Confirmar senha"
-                        required>
+                        placeholder="Confirmar senha" required>
+                        <span class="text-red-700 text-xs hidden">As senhas não são compatíveis!</span>
                 </label>
 
-                <button type="submit" class="text-slate-50 bg-pink-700 rounded flex justify-center w-full p-3 hover:bg-pink-800 transition-colors">
+                <button type="submit"
+                    class="text-slate-50 bg-pink-700 rounded flex justify-center w-full p-3 hover:bg-pink-800 transition-colors">
                     <span class="material-symbols-outlined mr-2">login</span>
                     Cadastrar
                 </button>
