@@ -1,6 +1,6 @@
 const form = document.getElementById("form");
 const boxForm = document.getElementById("box__form");
-const animateShakeX = "animate__shakeX";
+const animateShakeX = "animate-shakeX";
 
 form.addEventListener("submit", handleSubmit);
 boxForm.addEventListener("animationend", handleAnimation);
