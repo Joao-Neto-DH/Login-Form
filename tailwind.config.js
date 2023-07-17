@@ -9,7 +9,7 @@ module.exports = {
       keyframes: {
         shakeX: {
           "0%, 100%": {
-            transform: "translate3d(-50 %, -50%, 0)"
+            transform: "translate3d(-50%, -50%, 0)"
           },
           "50%": {
             transform: "translate3d(-56%, -50%, 0)"
