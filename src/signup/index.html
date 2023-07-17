@@ -57,8 +57,8 @@
                     <input type="password" name="password" id="password"
                         class="peer block w-full p-2 text-base bg-transparent text-pink-700 border focus:outline focus:outline-pink-700 rounded"
                         placeholder="Senha" required>
-                    <span class="text-red-700 hidden text-xs">A senha deve ter pelo menos 8 caracteres e pelo menos 1
-                        letra maiúscula e 1 número </span>
+                    <span class="text-red-700 hidden text-xs status">A senha deve ter pelo menos 8 caracteres</span>
+                    <span class="text-green-700 hidden text-xs status">Senha válida!</span>
                 </label>
 
                 <label for="password-confirm" class="block mb-8">
@@ -73,10 +73,12 @@
                 </label>
 
                 <button type="submit"
-                    class="text-slate-50 bg-pink-700 rounded flex justify-center w-full p-3 hover:bg-pink-800 transition-colors">
+                    class="text-slate-50 bg-pink-700 rounded flex justify-center w-full p-3 disabled:bg-gray-400 hover:bg-pink-800 transition-colors"
+                    disabled>
                     <span class="material-symbols-outlined mr-2">login</span>
                     Cadastrar
                 </button>
+                <a href="../">Já possuo uma conta</a>
             </form>
         </div>
     </div>
@@ -86,6 +88,23 @@
     </footer>
 
     <script src="../assets/js/animate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="/src/assets/js/confettiAnimation.js" type="application/javascript"></script>
+
+    <script type="application/javascript">
+        const PASSWORD_CONFIRM = document.getElementById("password-confirm");
+        const PASSWORD = document.getElementById("password");
+        const BTN_SUBMIT = document.querySelector("button[type=submit]");
+        
+        PASSWORD_CONFIRM.addEventListener("input", checkPassword);
+        PASSWORD.addEventListener("input", checkPassword);
+        
+        function checkPassword() {
+            if(PASSWORD.value.trim().length < 8) return;
+
+            BTN_SUBMIT.disabled = !(PASSWORD.value === PASSWORD_CONFIRM.value);
+        }
+    </script>
 </body>
 
 </html>

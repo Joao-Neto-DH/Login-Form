@@ -40,8 +40,12 @@ function handlerSubmit(evt) {
         showStatus(label, validInput);
     }
 
-    if (containsError)
+    if (containsError) {
         BOX_FORM.classList.add(ANIMATE_SHAKEX);
+    }else {
+        alert("Formulário submetido!");
+        startconfetti();
+    }
 }
 
 // Evento de animação

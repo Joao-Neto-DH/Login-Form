@@ -14,4 +14,4 @@ function startconfetti() {
 
 startconfetti();
 
-setInterval(() => startconfetti(), 5000);
+// setInterval(() => startconfetti(), 5000);
