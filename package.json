@@ -4,15 +4,8 @@
   "description": "Formulário de login criado com Tailwind",
   "main": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind": "npx tailwindcss -i ./src/input.css -o ./assets/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
-  "dependencies": {
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.3.2"
-  }
+  "license": "MIT"
 }
