@@ -24,7 +24,8 @@
 
 <body class="bg-slate-900">
 
-    <canvas width="300" height="300" id="canvas" class="w-screen h-screen -z-10 absolute after:absolute after:content-[''] after:w-screen after:h-screen"></canvas>
+    <canvas width="300" height="300" id="canvas"
+        class="w-screen h-screen -z-10 absolute after:absolute after:content-[''] after:w-screen after:h-screen"></canvas>
 
     <div id="box__form"
         class="bg-slate-50 w-72 sm:w-96 rounded-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-md">
@@ -36,6 +37,7 @@
                 <span>Login</span>
             </h1>
             <form id="form" action="/" method="post">
+
                 <label for="contact" class="block mb-6">
                     <span class="flex text-pink-700 mb-3">
                         <span class="material-symbols-outlined mr-2">email</span>
@@ -57,8 +59,8 @@
                     <input type="password" name="password" id="password"
                         class="block w-full p-2 text-base bg-transparent text-pink-700 border focus:outline focus:outline-pink-700 rounded"
                         placeholder="Senha" required>
-                    <span class="text-red-700 hidden text-xs">A senha deve ter pelo menos 8 caracteres e pelo menos 1
-                        letra maiúscula e 1 número </span>
+                    <span class="text-red-700 hidden text-xs status">A senha deve ter pelo menos 8 caracteres</span>
+                    <span class="text-green-700 hidden text-xs status">Senha válida!</span>
                 </label>
 
                 <button type="submit"
@@ -76,26 +78,7 @@
 
     <script src="assets/js/animate.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    <script type="application/javascript">
-
-        function startconfetti() {
-            var myCanvas = document.getElementById("canvas");
-            var myConfetti = confetti.create(myCanvas, {
-                resize: true,
-                useWorker: true
-            });
-
-            myConfetti({
-                particleCount: 100,
-                spread: 160,
-                shapes: ['circle', 'circle', 'square']
-            });
-        }
-
-        startconfetti();
-        
-        setInterval(() => startconfetti(), 5000);
-    </script>
+    <script src="/src/assets/js/confettiAnimation.js" type="application/javascript"></script>
 </body>
 
 </html>
